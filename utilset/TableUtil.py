@@ -28,7 +28,7 @@ class TableUtil():
             Code Text NOT NULL,\
             FullPath Text NOT NULL,\
             CodeTime Text NOT NULL,\
-            PRIMARY KEY (FileName, CodeTime)\
+            PRIMARY KEY (FileName, FullPath, CodeTime)\
         )"
         # do create db
         self.__sqlLiteUtil.Execute(self.__dbFile, command, [])

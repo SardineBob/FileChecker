@@ -38,7 +38,7 @@ def __isFileCodeMatch(filePath, fileCode, table):
     for filename, code, fullpath, codetime in table:
         if filePath == fullpath:
             return (True, "") if fileCode == code else (False, "檔案路徑:" + fullpath + "，雜湊值不相符。")
-    return (False, "檔案路徑:" + fullpath + "，是新增的檔案，無法比對雜湊值。")
+    return (False, "檔案路徑:" + filePath + "，是新增的檔案，無法比對雜湊值。")
 
 
 # 反向檢查，是否有檔案被刪除
